@@ -12,6 +12,7 @@
     <title>Urban Auto</title>
     <!-- StyleSheets  -->
     <link rel="stylesheet" href="~/Addons/assets/css/dashlite.css">
+    <link rel="stylesheet" href="~/Addons/assets/css/dashlite.min.css">
     <link id="skin-default" rel="stylesheet" href="~/Addons/assets/css/theme.css">
 </head>
 <body class="nk-body bg-white npc-landing ">
@@ -59,79 +60,7 @@
                     </div><!-- .container -->
                 </div><!-- .header-content -->
             </header><!-- .header -->
-
-                    @RenderBody()
-            <!-- Enquiry Model Start-->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Enquiry</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="row col-md-12">
-                                    <div class="form-group col-md-6">
-                                        <label class="form-label" for="default-04">First Name</label>
-                                        <input type="text" class="form-control" id="recipient-name" placeholder="Enter your first name">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="form-label" for="default-04">Last Name</label>
-                                        <input type="text" class="form-control" id="recipient-name" placeholder="Enter your last name">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label class="form-label" for="fv-phone">Phone</label>
-                                            <div class="form-control-wrap">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                        <span class="input-group-text" id="fv-phone">+91</span>
-                                                    </div>
-                                                    <input type="number" class="form-control" placeholder="Enter your number">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="form-label" for="default-04">Email</label>
-                                        <div class="form-control-wrap">
-                                            <div class="form-icon form-icon-right">
-                                                <em class="icon ni ni-mail"></em>
-                                            </div>
-                                            <input type="email" class="form-control" id="default-04" placeholder="Enter your email">
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="form-label">State</label>
-                                        <div class="form-control-wrap">
-                                            <select onchange="print_city('state', this.selectedIndex);" id="sts" name="stt" class="form-control" required></select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="form-label">City</label>
-                                        <div class="form-control-wrap">
-                                            <select id="state" class="form-control" required></select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <label for="message-text" class="col-form-label text-dark">Message:</label>
-                                        <textarea class="form-control" id="message-text"></textarea>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Send enquiry</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Enquiry Model End -->
-
+            @RenderBody()
 
             <footer class="footer bg-dark is-dark section section-sm" id="footer">
                 <div class="container">
@@ -166,15 +95,16 @@
             </footer><!-- .footer -->
         </div>
     </div>
-    <script src="~/js/cities.js"></script>
-    <script language="javascript">print_state("sts");</script>
+    <script src="~/js/custom/cities.js"></script>
+    <script language="javascript">print_state("State");</script>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/Addons/assets/js/bundle.js" asp-append-version="true"></script>
     <script src="~/Addons/assets/js/scripts.js" asp-append-version="true"></script>
-
+    <!--Custom JS-->
+    <script src="~/js/custom/Enquiry.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

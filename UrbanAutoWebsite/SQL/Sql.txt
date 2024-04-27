@@ -1,0 +1,1 @@
+Scaffold-DbContext "server=NIKHIL-PANCHAL\SQLEXPRESS;user=UrbanAuto;password=UA@123;database=UrbanAutoMaster;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir D:\GitUrbanAutoWeb\UrbanAutoWebsite\UrbanAutoWebsite\UrbanAutoWebsite\DataProvider -force -DataAnnotations

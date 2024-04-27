@@ -1,4 +1,6 @@
-﻿<section class="section section-service pb-0" id="feature">
+﻿@model UrbanAutoWebsite.Models.EnquiryViewModel
+
+<section class="section section-service pb-0" id="feature">
     <div class="container">
         <div class="row justify-content-center text-center">
             <div class="col-sm-8 col-lg-6">
@@ -183,6 +185,7 @@
         </div><!-- .row -->
     </div><!-- .container -->
 </section><!-- .section -->
+
 <section class="section section-cta bg-lighter" id="cta">
     <div class="container">
         <div class="row justify-content-center text-center">
@@ -195,3 +198,81 @@
         </div><!-- .row -->
     </div><!-- .container -->
 </section><!-- .section -->
+<!-- Enquiry Model Start-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            @using (Html.BeginForm("Enquirypost", "Home", FormMethod.Post, new { id = "EnquiryForm" }))
+            {
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Enquiry</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row col-md-12">
+                        <div class="form-group col-md-6">
+                            <label class="form-label" for="FirstName">First Name*</label>
+                            <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder="Enter your first name">
+                            <span class="text-danger small clsFName"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="form-label" for="LastName">Last Name*</label>
+                            <input type="text" class="form-control" id="LastName" name="LastName" placeholder="Enter your last name">
+                            <span class="text-danger small clsLName"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label" for="Phone">Phone*</label>
+                                <div class="form-control-wrap">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="fv-phone">+91</span>
+                                        </div>
+                                        <input type="number" class="form-control" id="Phone" name="Phone" maxlength="10" placeholder="Enter your number">
+                                        <span class="text-danger small clsPhone"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="form-label" for="Email">Email*</label>
+                            <div class="form-control-wrap">
+                                <div class="form-icon form-icon-right">
+                                    <em class="icon ni ni-mail"></em>
+                                </div>
+                                <input type="email" class="form-control" id="Email" name="Email" placeholder="Enter your email">
+                            </div>
+                            <span class="text-danger small clsEmail"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="form-label">State*</label>
+                            <div class="form-control-wrap">
+                                <select onchange="print_city('City', this.selectedIndex);" id="State" name="State" class="form-control" required></select>
+                            </div>
+                            <span class="text-danger small clsState"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="form-label">City*</label>
+                            <div class="form-control-wrap">
+                                <select id="City" name="City" class="form-control" required></select>
+                            </div>
+                            <span class="text-danger small clsCity"></span>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="Description" class="col-form-label text-dark">Message*</label>
+                            <textarea class="form-control" id="Description" name="Description"></textarea>
+                            <span class="text-danger small clsDescription"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="btnSubmit">Send enquiry</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<!-- Enquiry Model End -->
