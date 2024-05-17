@@ -45,7 +45,7 @@ namespace UrbanAutoWebsite.Controllers
 
                 var templatePath = "D:\\GitUrbanAutoWeb\\UrbanAutoWebsite\\UrbanAutoWebsite\\UrbanAutoWebsite\\EmailTemplate\\WelcomEmail.cshtml";
                 var userName = enquiryViewModel.FirstName + " " + enquiryViewModel.LastName;
-                //_emailService.SendEmail(enquiryViewModel.Email, "Enquiry Submitted", templatePath, userName);
+                ///_emailService.SendEmail(enquiryViewModel.Email, "Enquiry Submitted", templatePath, userName);
 
                 _context.CustomerEnquiries.Add(enquiry);
                 await _context.SaveChangesAsync();

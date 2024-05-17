@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UrbanAutoWebsite")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65ebc6ecbb94228a9b12876961c4b54c363c0923")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+170a5af032ef2394d287cb30c1984d732cf6a39b")]
 [assembly: System.Reflection.AssemblyProductAttribute("UrbanAutoWebsite")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UrbanAutoWebsite")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
